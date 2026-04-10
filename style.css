@@ -61,4 +61,5 @@ main {
 
 .klecks:hover {
     cursor: pointer;
+    touch-action: manipulation;
 }
