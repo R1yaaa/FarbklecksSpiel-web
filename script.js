@@ -11,7 +11,7 @@ const klecksBilder = [
     "images/klecks10.png"
 ]
 const klecksPositionen = [];
-const minDistance = 5;
+const minDistance = 3;
 // const maxRespawns = 0;
 let clickCount = 0;
 
@@ -74,11 +74,15 @@ function getValidPosition(klecksGroesse) {
     let validPosition = false;
 
     while (!validPosition) {
-        const maxX = Math.max(0, containerWidth - klecksGroesse);
-        const maxY = Math.max(0, containerHeight - klecksGroesse);
+        const offset = klecksGroesse * 0.25; //ränder voller
 
-        randomX = Math.floor(Math.random() * (maxX + 1));
-        randomY = Math.floor(Math.random() * (maxY + 1));
+        const minX = -offset;
+        const minY = -offset;
+        const maxX = containerWidth - klecksGroesse + offset;
+        const maxY = containerHeight - klecksGroesse + offset;
+
+        randomX = Math.floor(Math.random() * (maxX - minX + 1)) + minX;
+        randomY = Math.floor(Math.random() * (maxY - minY + 1)) + minY;
 
         validPosition = true;
 
@@ -115,5 +119,5 @@ function randomSize () {
     return size;
 }
 
-createKleckse(90);
+createKleckse(7);
 
