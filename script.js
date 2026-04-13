@@ -122,5 +122,5 @@ function randomSize () {
     return size;
 }
 
-createKleckse(90);
+createKleckse(95);
 
