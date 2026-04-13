@@ -57,6 +57,8 @@ main {
     border-radius: 12px;
     background-color: #fff;
     background-size: contain;
+    touch-action: manipulation;
+
 }
 
 #message-image {

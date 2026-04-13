@@ -11,7 +11,7 @@ const klecksBilder = [
     "images/klecks10.png"
 ]
 const klecksPositionen = [];
-const minDistance = 20;
+const minDistance = 25;
 // const maxRespawns = 0;
 let clickCount = 0;
 
@@ -122,5 +122,14 @@ function randomSize () {
     return size;
 }
 
-createKleckse(95);
+document.addEventListener(
+  "dblclick",
+  function (event) {
+    event.preventDefault();
+  },
+  { passive: false }
+);
+
+
+createKleckse(110);
 
