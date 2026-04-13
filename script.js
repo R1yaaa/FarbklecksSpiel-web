@@ -11,7 +11,7 @@ const klecksBilder = [
     "images/klecks10.png"
 ]
 const klecksPositionen = [];
-const minDistance = 3;
+const minDistance = 8;
 // const maxRespawns = 0;
 let clickCount = 0;
 
@@ -49,6 +49,7 @@ function createKleckse(anzahl) {
 
     klecks.addEventListener("pointerdown", (e) => {
         e.preventDefault();
+        e.stopPropagation();
         console.log("geklickt");
         // let respawnsLeft = Number(klecks.dataset.respawnsLeft);
         clickCount++;
@@ -121,5 +122,5 @@ function randomSize () {
     return size;
 }
 
-createKleckse(85);
+createKleckse(90);
 
