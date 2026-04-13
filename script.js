@@ -15,6 +15,13 @@ const minDistance = 25;
 // const maxRespawns = 0;
 let clickCount = 0;
 
+gameContainer.addEventListener('touchstart', (e) => {
+    if (e.target.classList.contains('klecks')) {
+        e.preventDefault();
+    }
+}, { passive: false });
+
+
 
 function createKleckse(anzahl) {
     for (let i = 0; i < anzahl; i++) {
@@ -50,20 +57,23 @@ function createKleckse(anzahl) {
     klecks.addEventListener("pointerdown", (e) => {
         e.preventDefault();
         e.stopPropagation();
-        console.log("geklickt");
+        e.stopImmediatePropagation();
+        
+        if (klecks.dataset.removing === "true") return;
+        klecks.dataset.removing = "true";
         // let respawnsLeft = Number(klecks.dataset.respawnsLeft);
         clickCount++;
-        klecks.remove();
         const index = klecksPositionen.indexOf(posObj);
 
         if (index !== -1) {
             klecksPositionen.splice(index, 1);
         }
+        klecks.remove();
 
         if (clickCount % 3 === 0) {
             createKleckse(1);
         }
-        })
+        }, { passive: false });
     }
 }
 
