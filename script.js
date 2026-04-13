@@ -110,7 +110,7 @@ function randomSize () {
     let max;
 
     if (screenWidth>=768) {
-        min = 180;
+        min = 200;
         max = 260;
     }
     else {
@@ -131,5 +131,5 @@ document.addEventListener(
 );
 
 
-createKleckse(160);
+createKleckse(180);
 
