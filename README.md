@@ -1,6 +1,6 @@
 # Farbklecks Spiel
 Small interactive game where users have to click on colored blobs to reveal the background.
-[Click here to try out](https://r1yaaa.github.io/FarbklecksSpiel/)
+[Click here to try out](https://stjume.github.io/FarbklecksSpiel/)
 
 ---
 
@@ -38,7 +38,7 @@ Small interactive game where users have to click on colored blobs to reveal the 
 Clone the repository:
 
 ```bash
-git clone https://github.com/R1yaaa/FarbklecksSpiel.git
+git clone https://github.com/stjume/FarbklecksSpiel.git
 ```
 
 For development, using a local web server such as **Live Server** is recommended.
