@@ -4,10 +4,10 @@ const klecksBilder = [
     "images/klecks3.png",
     "images/klecks4.png",
     "images/klecks5.png",
-    "images/klecks6.png",
+    "images/klecks6.PNG",
     "images/klecks7.png",
     "images/klecks8.png",
-    "images/klecks9.png",
+    "images/klecks9.PNG",
     "images/klecks10.png"
 ]
 const klecksPositionen = [];
@@ -120,8 +120,8 @@ function randomSize () {
     let max;
 
     if (screenWidth < 768) { //phone
-        min = 80;
-        max = 100;
+        min = 110;
+        max = 130;
     }
     else if (screenWidth < 1200) { //ipad/laptop
         min = 140;
@@ -132,8 +132,8 @@ function randomSize () {
         max = 240;
     }
     else {
-        min = 240;
-        max = 300;
+        min = 260;
+        max = 320;
     }
 
     const size = Math.random() * (max - min) + min;
@@ -154,7 +154,7 @@ function getInitialKlecksCount() {
     const area = containerWidth * containerHeight;
 
     if (area < 500000) {
-        return 10;
+        return 20;
     } else if (area < 900000) {
         return 180;
     }
