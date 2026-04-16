@@ -159,11 +159,11 @@ function getInitialKlecksCount() {
         return 180;
     }
     else if (area < 1100000) {
-        return 200;
+        return 210;
     } else if (area < 1400000) {
-        return 240;
+        return 285;
     } else {
-        return 250;
+        return 330;
     }
 }
 
